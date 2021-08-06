@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'spring_kernel'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/respository/google/'
+    }
+    maven {
+        url "https://maven.aliyun.com/respository/jcenter/"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            "org.springframework:spring-core:5.2.6.RELEASE",
+            "org.springframework:spring-aop:5.2.6.RELEASE",
+    )
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
